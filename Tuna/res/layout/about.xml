@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Before Android 2.3 (API level 9), performing a query on the Contacts Provider (like the one shown above) requires that your app declare the READ_CONTACTS permission (see Security and Permissions). However, beginning with Android 2.3, the Contacts/People app grants your app a temporary permission to read from the Contacts Provider when it returns you a result. The temporary permission applies only to the specific contact requested, so you cannot query a contact other than the one specified by the intent's Uri, unless you do declare the READ_CONTACTS permission." />
+
+</LinearLayout>
