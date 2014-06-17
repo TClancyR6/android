@@ -1,16 +1,18 @@
 package com.edu.personal.traning;
 
-import com.edu.personal.traning.constants.Const;
-
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+
+import com.edu.personal.traning.constants.Const;
 
 public class Splash extends Activity {
 
 	private MediaPlayer mediaPlayer;
-	
+
 	@Override
 	protected void onCreate(Bundle bundle) {
 
@@ -23,9 +25,17 @@ public class Splash extends Activity {
 
 	private void initcomponent() {
 
-		setIntent();
-		setMediaplayer();
+		// get preference info
+		SharedPreferences sharedPreferences = PreferenceManager
+				.getDefaultSharedPreferences(getBaseContext());
+		boolean isMusicChecked = sharedPreferences.getBoolean(
+				Const.STR_MUSIC_ON_OFF_CHECKBOX_KEY, true);
+		
+		if (isMusicChecked) {
+			setMediaplayer();
+		}
 
+		setIntent();
 	}
 
 	private void setIntent() {
@@ -33,7 +43,7 @@ public class Splash extends Activity {
 		Thread thread = new Thread() {
 			public void run() {
 				try {
-					sleep(Const.INT_5000);
+					sleep(Const.INT_2000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				} finally {
@@ -46,8 +56,7 @@ public class Splash extends Activity {
 	}
 
 	private void setMediaplayer() {
-		mediaPlayer = MediaPlayer.create(Splash.this,
-				R.raw.splashsound);
+		mediaPlayer = MediaPlayer.create(Splash.this, R.raw.splashsound);
 		mediaPlayer.start();
 	}
 
