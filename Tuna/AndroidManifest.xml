@@ -173,7 +173,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-                <activity
+        <activity
             android:name=".SharedPrefs"
             android:label="SharedPrefs" >
             <intent-filter>
@@ -181,7 +181,25 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity>ShredPrefs
+        </activity>
+        <activity
+            android:name=".InternalData"
+            android:label="InternalData" >
+            <intent-filter>
+                <action android:name="com.edu.personal.traning.INTERNALDATA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ExternalData"
+            android:label="ExternalData" >
+            <intent-filter>
+                <action android:name="com.edu.personal.traning.EXTERNALDATA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
