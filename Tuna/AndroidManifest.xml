@@ -10,6 +10,7 @@
 
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -150,6 +151,24 @@
             android:label="Tabs" >
             <intent-filter>
                 <action android:name="com.edu.personal.traning.TABS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SimpleBrowser"
+            android:label="SimpleBrowser" >
+            <intent-filter>
+                <action android:name="com.edu.personal.traning.SIMPLEBROWSER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Flipper"
+            android:label="Flipper" >
+            <intent-filter>
+                <action android:name="com.edu.personal.traning.FLIPPER" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
