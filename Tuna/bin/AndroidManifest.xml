@@ -173,6 +173,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+                <activity
+            android:name=".SharedPrefs"
+            android:label="SharedPrefs" >
+            <intent-filter>
+                <action android:name="com.edu.personal.traning.SHAREDPREFS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>ShredPrefs
     </application>
 
 </manifest>
